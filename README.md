@@ -4,18 +4,20 @@
 
 The workbook turns motel booking records into a management dashboard with native formulas, PivotTables, charts, slicers and a date timeline. The published scope is Excel: the repository contains the workbook and its actual dashboard capture.
 
-![Actual Excel motel booking dashboard with revenue, booking, cancellation and rating KPIs](Excel/excel_dashboard.png)
+## Dashboard Preview
 
-[Open the Excel workbook](Excel/Hospitality_Booking_Revenue_Performa.xlsx) · [View the full-resolution dashboard](Excel/excel_dashboard.png)
+![Native Excel export of the redesigned hospitality dashboard with estimated revenue, bookings, cancellations and guest ratings](screenshots/hospitality_booking_dashboard.png)
 
-## Business questions
+[Open the Excel workbook](Excel/Hospitality_Booking_Revenue_Performa.xlsx) · [View the full-resolution dashboard](screenshots/hospitality_booking_dashboard.png)
+
+## Business Problem
 
 - Which room types contribute the most estimated booking revenue?
 - How are bookings distributed across direct, online-agent and walk-in channels?
 - What share of bookings is cancelled, completed or marked as a no-show?
 - How do monthly booking revenue and room-type ratings vary?
 
-## Results in the saved workbook
+## Key Findings
 
 | Metric | Saved value | Interpretation |
 |---|---:|---|
@@ -29,7 +31,7 @@ The workbook turns motel booking records into a management dashboard with native
 
 The dashboard's “Total Revenue” card represents **estimated booking revenue**, not audited cash receipts, recognized revenue or profit. These numbers are the saved workbook snapshot, not a live booking feed.
 
-## Findings and decisions to investigate
+## Business Recommendations
 
 - **Deluxe** has the largest estimated room-type revenue at **£7,366.90**, followed by Standard at £7,009.70. Compare price, stay length and capacity before deciding which room type to expand.
 - **Booking.com and Expedia each contribute 30 bookings**; walk-ins contribute 29 and direct bookings 28. Channel counts alone cannot establish channel profitability because commission and acquisition costs are absent.
@@ -51,7 +53,7 @@ The dashboard's “Total Revenue” card represents **estimated booking revenue*
 
 The file contains **15 worksheets, 10 PivotTable definitions and 10 chart definitions**. Counts describe workbook objects, including supporting sheets; they do not imply ten separate dashboard visuals.
 
-## Explore locally
+## How to Reproduce
 
 1. Clone or download this repository.
 2. Open `Excel/Hospitality_Booking_Revenue_Performa.xlsx` in desktop Microsoft Excel for the fullest slicer and timeline support.
@@ -67,3 +69,21 @@ The portfolio review inspected the XLSX package without rewriting it. Saved dash
 An independently verifiable upstream dataset citation or generation record is not included. Treat this as a **demonstration case study**; the repository does not establish that these are real commercial bookings. Booking counts do not establish occupancy without available room-nights, and the data do not establish profit, causal effects or realized business improvements.
 
 No reuse license or upstream dataset license is supplied; publication alone does not establish reuse rights.
+
+## Tools & Technologies
+
+Native Microsoft Excel: formulas, tables, PivotTables, PivotCharts, slicers, a timeline and one stored Power Query. No unsupported occupancy, profitability or cash-receipt metrics are introduced.
+
+## Project Architecture
+
+`Raw_Motel_Data → Cleaned_Motel_Booking_Data → formula / Pivot_* summaries → Excel_Dashboard`. Source, calculation and supporting chart sheets remain in the genuine workbook.
+
+## Key Analysis
+
+Estimated revenue follows the existing workbook field; cancellations and no-shows remain separate. Available numeric responses determine guest ratings. Chart series still reference the original PivotTable ranges. The rating axis runs from zero to five.
+
+## Testing & Validation
+
+The redesigned workbook was opened, calculated and saved in native Excel 16.0. **All original formula texts have the same SHA-256 fingerprint**. All 15 worksheets, 10 PivotTable definitions, 10 chart definitions, one query, one connection and five slicer caches remain. The five dashboard charts retain their original sources. KPI reconciliation: **£28,774.55**, **120** bookings, **98** completed, **11.67%** cancellations and **4.1531** average rating before display rounding. [Evidence](docs/design/redesign_validation.json).
+
+The preview is rendered from the actual redesigned worksheet’s native PDF export; no chart values or image content were reconstructed. Slicer selection, timeline selection and external Power Query refresh were not exercised. [Design notes](docs/design/REDESIGN_NOTES.md).
