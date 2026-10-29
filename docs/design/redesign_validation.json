@@ -14,11 +14,12 @@
   "connections": 1,
   "slicer_caches": 5,
   "preview_method": "Native Excel ExportAsFixedFormat; rendered to PNG without changing chart values",
-  "unverified": "Slicer selection, timeline selection and external Power Query refresh",
+  "unverified": "External Power Query refresh and untested filter combinations; tested native slicer/timeline selections are documented in interaction_validation.json",
   "all_original_formula_texts_identical": true,
   "original_formula_sha256": "31c94b5ba6fce97a2409ca8d3b4030c9a5922d0f74c6bc2ae630e66c77f410f1",
   "redesigned_formula_sha256": "31c94b5ba6fce97a2409ca8d3b4030c9a5922d0f74c6bc2ae630e66c77f410f1",
   "workbook_chart_definitions": 10,
   "workbook_pivottable_definitions": 10,
-  "query_and_connection_parts_retained": true
+  "query_and_connection_parts_retained": true,
+  "followup_interaction_evidence": "interaction_validation.json"
 }

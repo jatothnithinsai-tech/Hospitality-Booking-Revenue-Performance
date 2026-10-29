@@ -64,7 +64,7 @@ No cloud service, database or credential is required to review the published art
 
 ## Validation and limits
 
-The portfolio review inspected the XLSX package without rewriting it. Saved dashboard and PivotTable values agree for total bookings, completed bookings, cancellations, estimated revenue and average rating. The workbook contains no external-link relationships in the inspected package. Excel refresh, slicer behaviour and formula recalculation were not rerun in that review.
+Native Excel validation reconciled saved dashboard and PivotTable values for bookings, completed bookings, cancellations, estimated revenue and average rating. Formula and query preservation are recorded below. The package has no external-link relationships. Follow-up QA on 29 October 2026 exercised one selection and reset in each of four slicers and the date timeline on a disposable copy; all passed. External Power Query refresh remains untested.
 
 An independently verifiable upstream dataset citation or generation record is not included. Treat this as a **demonstration case study**; the repository does not establish that these are real commercial bookings. Booking counts do not establish occupancy without available room-nights, and the data do not establish profit, causal effects or realized business improvements.
 
@@ -86,4 +86,4 @@ Estimated revenue follows the existing workbook field; cancellations and no-show
 
 The redesigned workbook was opened, calculated and saved in native Excel 16.0. **All original formula texts have the same SHA-256 fingerprint**. All 15 worksheets, 10 PivotTable definitions, 10 chart definitions, one query, one connection and five slicer caches remain. The five dashboard charts retain their original sources. KPI reconciliation: **£28,774.55**, **120** bookings, **98** completed, **11.67%** cancellations and **4.1531** average rating before display rounding. [Evidence](docs/design/redesign_validation.json).
 
-The preview is rendered from the actual redesigned worksheet’s native PDF export; no chart values or image content were reconstructed. Slicer selection, timeline selection and external Power Query refresh were not exercised. [Design notes](docs/design/REDESIGN_NOTES.md).
+The preview is rendered from the actual redesigned worksheet’s native PDF export; no chart values or image content were reconstructed. [Native interaction QA](docs/design/interaction_validation.json) passed for room type, booking source, payment status, guest country and a 6 January–5 February 2025 timeline range. Each cache connects to ten PivotTables; the tested selections changed PivotTable outputs and headline KPIs, and clearing restored the baseline. The published workbook was not saved or changed during these tests. External Power Query refresh and all possible filter combinations remain untested. [Design notes](docs/design/REDESIGN_NOTES.md).

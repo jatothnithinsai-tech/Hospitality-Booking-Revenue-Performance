@@ -1,0 +1,143 @@
+{
+  "checked_at_utc": "2026-10-29T23:03:31.304468+00:00",
+  "method": "Native Excel COM; separate disposable copy; external refresh not invoked; no original file saved",
+  "source_sha256": "74223746251b3272d1d16ebfde0a81f62f9ca8cdc490495fba0c27487b42095e",
+  "checks": [
+    {
+      "cache": "Slicer_Room_Type",
+      "type": 1,
+      "connected_pivots": 10,
+      "selection": "Deluxe",
+      "pivot_output_changed": true,
+      "dashboard_kpis_changed": true,
+      "dashboard_kpis_before": {
+        "A": 28774.549999999996,
+        "D": 120.0,
+        "G": 98.0,
+        "J": 0.11666666666666667,
+        "M": 4.153061224489796
+      },
+      "dashboard_kpis_filtered": {
+        "A": 7366.900000000001,
+        "D": 30.0,
+        "G": 28.0,
+        "J": 0.06666666666666667,
+        "M": 4.333333333333333
+      },
+      "baseline_restored": true,
+      "status": "PASS"
+    },
+    {
+      "cache": "Slicer_Booking_Source",
+      "type": 1,
+      "connected_pivots": 10,
+      "selection": "Booking.com",
+      "pivot_output_changed": true,
+      "dashboard_kpis_changed": true,
+      "dashboard_kpis_before": {
+        "A": 28774.549999999996,
+        "D": 120.0,
+        "G": 98.0,
+        "J": 0.11666666666666667,
+        "M": 4.153061224489796
+      },
+      "dashboard_kpis_filtered": {
+        "A": 7358.799999999999,
+        "D": 30.0,
+        "G": 26.0,
+        "J": 0.06666666666666667,
+        "M": 4.115384615384615
+      },
+      "baseline_restored": true,
+      "status": "PASS"
+    },
+    {
+      "cache": "Slicer_Payment_Status",
+      "type": 1,
+      "connected_pivots": 10,
+      "selection": "Paid",
+      "pivot_output_changed": true,
+      "dashboard_kpis_changed": true,
+      "dashboard_kpis_before": {
+        "A": 28774.549999999996,
+        "D": 120.0,
+        "G": 98.0,
+        "J": 0.11666666666666667,
+        "M": 4.153061224489796
+      },
+      "dashboard_kpis_filtered": {
+        "A": 26676.219999999998,
+        "D": 92.0,
+        "G": 89.0,
+        "J": 0.010869565217391304,
+        "M": 4.157303370786517
+      },
+      "baseline_restored": true,
+      "status": "PASS"
+    },
+    {
+      "cache": "Slicer_Guest_Country",
+      "type": 1,
+      "connected_pivots": 10,
+      "selection": "Australia",
+      "pivot_output_changed": true,
+      "dashboard_kpis_changed": true,
+      "dashboard_kpis_before": {
+        "A": 28774.549999999996,
+        "D": 120.0,
+        "G": 98.0,
+        "J": 0.11666666666666667,
+        "M": 4.153061224489796
+      },
+      "dashboard_kpis_filtered": {
+        "A": 5947.799999999999,
+        "D": 21.0,
+        "G": 19.0,
+        "J": 0.047619047619047616,
+        "M": 4.05
+      },
+      "baseline_restored": true,
+      "status": "PASS"
+    },
+    {
+      "cache": "NativeTimeline_Check_In_Date",
+      "type": 2,
+      "connected_pivots": 10,
+      "selection": [
+        "2025-01-06 00:00:00+00:00",
+        "2025-02-05 00:00:00+00:00"
+      ],
+      "pivot_output_changed": true,
+      "dashboard_kpis_changed": true,
+      "dashboard_kpis_before": {
+        "A": 28774.549999999996,
+        "D": 120.0,
+        "G": 98.0,
+        "J": 0.11666666666666667,
+        "M": 4.153061224489796
+      },
+      "dashboard_kpis_filtered": {
+        "A": 3046.08,
+        "D": 12.0,
+        "G": 11.0,
+        "J": 0.08333333333333333,
+        "M": 4.090909090909091
+      },
+      "baseline_restored": true,
+      "dashboard_kpis_after_clear": {
+        "A": 28774.549999999996,
+        "D": 120.0,
+        "G": 98.0,
+        "J": 0.11666666666666667,
+        "M": 4.153061224489796
+      },
+      "status": "PASS"
+    }
+  ],
+  "native_excel_version": "16.0",
+  "slicer_cache_count": 5,
+  "dashboard_kpi_scope": "Tested category selections changed connected PivotTables and headline KPI values. Clearing each selection restored the full baseline; untested selection combinations are not claimed.",
+  "external_Power_Query_refresh": "Not exercised",
+  "status": "PASS",
+  "published_source_unchanged": true
+}
